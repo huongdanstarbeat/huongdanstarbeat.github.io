@@ -49,10 +49,18 @@
     .nhan.vang { background: #ffe066; color: #2a0a00; }
     .nhan.xanh { background: #3cd8ff; color: #06243a; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    th, td { padding: 9px 6px; text-align: left; border-bottom: 1px solid #2d1a55; }
+    th, td { padding: 8px 6px; text-align: left; border-bottom: 1px solid #2d1a55; vertical-align: middle; }
     th { color: #b9a6e6; font-size: 13px; }
     tr:last-child td { border-bottom: none; }
-    .qua { font-weight: 800; color: #ffe066; }
+    .o-qua { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #ffe066; }
+    .o-qua img {
+      width: 38px; height: 38px; object-fit: cover; border-radius: 50%;
+      background: #0a0418; border: 1.5px solid #ff3cc7; flex-shrink: 0;
+    }
+    .o-qua span.emj {
+      width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center;
+      font-size: 22px; background: #0a0418; border-radius: 50%; border: 1px solid #3b2366; flex-shrink: 0;
+    }
     .xu { color: #3cd8ff; font-weight: 700; font-size: 13px; white-space: nowrap; }
     .luoi-so {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 10px;
@@ -106,71 +114,71 @@
           <th>Giá</th>
         </tr>
         <tr>
-          <td class="qua">🎁 Tặng ngẫu nhiên</td>
+          <td><div class="o-qua"><img src="hop-qua.png" onerror="this.outerHTML='<span class=emj>🎁</span>'"><span>Tặng ngẫu nhiên</span></div></td>
           <td>Vào sàn nhảy + Lên hàng trước 10 giây</td>
           <td class="xu">Tự do</td>
         </tr>
         <tr>
-          <td class="qua">🌹 Hoa hồng</td>
+          <td><div class="o-qua"><img src="hoa-hong.png" onerror="this.outerHTML='<span class=emj>🌹</span>'"><span>Hoa hồng</span></div></td>
           <td>Chụp ảnh đơn lưu niệm</td>
           <td class="xu">1 xu</td>
         </tr>
         <tr>
-          <td class="qua">🎮 GG</td>
+          <td><div class="o-qua"><img src="gg.png" onerror="this.outerHTML='<span class=emj>🎮</span>'"><span>GG</span></div></td>
           <td>Đổi giới tính nhân vật (Nam / Nữ)</td>
           <td class="xu">1 xu</td>
         </tr>
         <tr>
-          <td class="qua">🎵 TikTok</td>
+          <td><div class="o-qua"><img src="tiktok.png" onerror="this.outerHTML='<span class=emj>🎵</span>'"><span>TikTok</span></div></td>
           <td>Mở khóa chọn Hiệu ứng dưới chân</td>
           <td class="xu">1 xu</td>
         </tr>
         <tr>
-          <td class="qua">🍑 Quả đào</td>
+          <td><div class="o-qua"><img src="qua-dao.png" onerror="this.outerHTML='<span class=emj>🍑</span>'"><span>Quả đào</span></div></td>
           <td>Chụp ảnh đôi cùng bạn nhảy</td>
           <td class="xu">5 xu</td>
         </tr>
         <tr>
-          <td class="qua">🫰 Bắn tim</td>
+          <td><div class="o-qua"><img src="ban-tim.png" onerror="this.outerHTML='<span class=emj>🫰</span>'"><span>Bắn tim</span></div></td>
           <td>Zoom camera ưu tiên (10 giây)</td>
           <td class="xu">5 xu</td>
         </tr>
         <tr>
-          <td class="qua">🍦 Bing Chilling</td>
+          <td><div class="o-qua"><img src="bing-chilling.png" onerror="this.outerHTML='<span class=emj>🍦</span>'"><span>Bing Chilling</span></div></td>
           <td>Mở khóa chọn Trang phục trong tủ đồ</td>
           <td class="xu">5 xu</td>
         </tr>
         <tr>
-          <td class="qua">👌 OK</td>
+          <td><div class="o-qua"><img src="ok.png" onerror="this.outerHTML='<span class=emj>👌</span>'"><span>OK</span></div></td>
           <td>Đeo thêm đôi cánh phát sáng</td>
           <td class="xu">5 xu</td>
         </tr>
         <tr>
-          <td class="qua">🌺 Rosa</td>
+          <td><div class="o-qua"><img src="rosa.png" onerror="this.outerHTML='<span class=emj>🌺</span>'"><span>Rosa</span></div></td>
           <td>Lên bục nhảy Solo một mình (15 giây)</td>
           <td class="xu">10 xu</td>
         </tr>
         <tr>
-          <td class="qua">🧴 Nước hoa</td>
+          <td><div class="o-qua"><img src="nuoc-hoa.png" onerror="this.outerHTML='<span class=emj>🧴</span>'"><span>Nước hoa</span></div></td>
           <td>Nhảy đôi trên bục (chọn bạn 15s · nhảy 22s)</td>
           <td class="xu">20 xu</td>
         </tr>
         <tr>
-          <td class="qua">🍩 Bánh vòng</td>
+          <td><div class="o-qua"><img src="banh-vong.png" onerror="this.outerHTML='<span class=emj>🍩</span>'"><span>Bánh vòng</span></div></td>
           <td>Nhảy đôi lãng mạn sàn tình yêu (30 giây)</td>
           <td class="xu">30 xu</td>
         </tr>
         <tr>
-          <td class="qua">💐 Bó hoa</td>
+          <td><div class="o-qua"><img src="bo-hoa.png" onerror="this.outerHTML='<span class=emj>💐</span>'"><span>Bó hoa</span></div></td>
           <td><b>PARTY TIME</b> cả sàn bùng nổ (35 giây)</td>
           <td class="xu">100 xu</td>
         </tr>
       </table>
     </div>
 
-    <!-- PHẦN 3: HIỆU ỨNG CHÂN (QUÀ TIKTOK) -->
+    <!-- PHẦN 3: HIỆU ỨNG CHÂN -->
     <div class="the">
-      <h2>3. Hiệu ứng dưới chân (Tặng quà 🎵 TikTok)</h2>
+      <h2>3. Hiệu ứng dưới chân (Tặng quà TikTok)</h2>
       <div class="dong">
         <span class="icon">✨</span>
         <div>Tặng 1 quà <span class="nhan vang">TikTok</span> sau đó bình luận mã <span class="nhan">C1</span> đến <span class="nhan">C10</span> để chọn kiểu:</div>
@@ -189,9 +197,9 @@
       </div>
     </div>
 
-    <!-- PHẦN 4: TỦ ĐỒ 30 BỘ (QUÀ BING CHILLING) -->
+    <!-- PHẦN 4: TỦ ĐỒ 30 BỘ -->
     <div class="the">
-      <h2>4. Tủ đồ 30 bộ (Tặng quà 🍦 Bing Chilling)</h2>
+      <h2>4. Tủ đồ 30 bộ (Tặng quà Bing Chilling)</h2>
       <div class="dong">
         <span class="icon">👗</span>
         <div>Tặng 1 quà <span class="nhan vang">Bing Chilling</span> sau đó bình luận <span class="nhan">SỐ bộ</span> từ <b>1</b> đến <b>30</b>:</div>
@@ -215,36 +223,3 @@
         <div><b>23</b> Hologram Đính Đá</div>
         <div><b>9</b> Cúp Ngực Đỏ Kim Sa</div>
         <div><b>24</b> Giáp Cyber Neon</div>
-        <div><b>10</b> Cúp Ngực Hồng Bèo</div>
-        <div><b>25</b> Choàng Đỏ Cargo</div>
-        <div><b>11</b> Cúp Ngực Bạc Ánh Trăng</div>
-        <div><b>26</b> Trắng Dây Đỏ</div>
-        <div><b>12</b> Cúp Ngực Đen Neon</div>
-        <div><b>27</b> Street Trắng Cap</div>
-        <div><b>13</b> Cúp Ngực Xanh Ngọc</div>
-        <div><b>28</b> Đen Toàn Tập Goggle</div>
-        <div><b>14</b> Cyber Pastel Xanh</div>
-        <div><b>29</b> Jersey Đỏ Trắng</div>
-        <div><b>15</b> Hoa Đỏ Hè Phố</div>
-        <div><b>30</b> Newsboy Đen Trắng</div>
-      </div>
-    </div>
-
-    <div class="luu-y">
-      Chúc cả nhà quẩy nhạc thật vui vẻ tại phòng LIVE STARBEAT! 💜
-    </div>
-  </div>
-
-  <!-- Tự động đổi link kênh TikTok nếu đường dẫn có thêm ?kenh=ten_kenh -->
-  <script>
-    const params = new URLSearchParams(location.search);
-    const kenh = params.get('kenh');
-    if (kenh) {
-      const idSach = kenh.replace(/^@+/, '').trim();
-      const nut = document.getElementById('linkTikTok');
-      nut.href = 'https://tiktok.com@' + idSach;
-      nut.textContent = '🎵 Theo dõi @' + idSach;
-    }
-  </script>
-</body>
-</html>
