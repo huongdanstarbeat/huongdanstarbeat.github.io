@@ -8,9 +8,9 @@
     * { box-sizing: border-box; }
     body {
       margin: 0; font-family: system-ui, 'Segoe UI', sans-serif;
-      background: #0d0620; color: #f4efff; padding: 20px 14px 40px;
+      background: #0d0620; color: #f4efff; padding: 18px 14px 40px;
     }
-    .khung { max-width: 540px; margin: 0 auto; }
+    .khung { max-width: 560px; margin: 0 auto; }
     .dau {
       text-align: center; background: linear-gradient(135deg, #2a0a4a, #150529);
       border: 2px solid #ff3cc7; border-radius: 18px; padding: 20px 16px;
@@ -21,7 +21,13 @@
       background: linear-gradient(90deg, #ff3cc7, #ffe066, #3cd8ff, #9bff2e);
       -webkit-background-clip: text; color: transparent;
     }
-    .dau p { margin: 0; color: #b9a6e6; font-size: 14px; }
+    .dau p { margin: 0 0 14px; color: #b9a6e6; font-size: 14px; }
+    a.nut-tt {
+      display: inline-block; padding: 11px 22px; border-radius: 99px;
+      background: linear-gradient(90deg, #ff3cc7, #6a3bff); color: #fff;
+      text-decoration: none; font-weight: 800; font-size: 15px;
+      box-shadow: 0 0 14px #ff3cc788;
+    }
     .the {
       background: #1a0d35; border: 1px solid #3b2366;
       border-radius: 14px; padding: 16px; margin-bottom: 14px;
@@ -46,7 +52,15 @@
     th, td { padding: 9px 6px; text-align: left; border-bottom: 1px solid #2d1a55; }
     th { color: #b9a6e6; font-size: 13px; }
     tr:last-child td { border-bottom: none; }
-    .qua { font-weight: 700; color: #ffe066; }
+    .qua { font-weight: 800; color: #ffe066; }
+    .xu { color: #3cd8ff; font-weight: 700; font-size: 13px; white-space: nowrap; }
+    .luoi-so {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 10px;
+      font-size: 13px; margin-top: 10px; background: #0a0418;
+      padding: 12px; border-radius: 10px;
+    }
+    .luoi-so div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .luoi-so b { color: #ffe066; display: inline-block; min-width: 28px; }
     .luu-y {
       font-size: 13px; color: #b9a6e6; text-align: center;
       margin-top: 16px; line-height: 1.5;
@@ -58,89 +72,179 @@
     <div class="dau">
       <h1>★ STARBEAT LIVE ★</h1>
       <p>Sàn nhảy âm nhạc 3D tương tác trực tiếp trên TikTok</p>
+      
+      <!-- ============================================================== -->
+      <!-- BẠN ĐỔI TÊN KÊNH TIKTOK MẶC ĐỊNH CỦA BẠN Ở DÒNG BÊN DƯỚI NHÉ: -->
+      <a id="linkTikTok" class="nut-tt" href="https://tiktok.com" target="_blank">🎵 Theo dõi kênh TikTok</a>
+      <!-- ============================================================== -->
     </div>
 
-    <!-- PHẦN 1: CÁCH VÀO SÀN NHẢY -->
+    <!-- PHẦN 1: LUẬT CHUNG -->
     <div class="the">
-      <h2>1. Cách lên sàn nhảy &amp; Chọn nhân vật</h2>
+      <h2>1. Cách lên sàn nhảy &amp; Đổi giới tính</h2>
       <div class="dong">
         <span class="icon">💗</span>
-        <div><b>Thả đủ 20 tim</b> hoặc <b>Bình luận bất kỳ</b>: Nhân vật của bạn sẽ xuất hiện ngay trên sàn nhảy và được ưu tiên lên phía trước 10 giây.</div>
+        <div><b>Thả đủ 20 tim</b>, <b>Bình luận bất kỳ</b> hoặc <b>Tặng ngẫu nhiên</b>: Nhân vật của bạn lên sàn nhảy ngay + ưu tiên đứng hàng trước <b>10 giây</b>.</div>
       </div>
       <div class="dong">
         <span class="icon">👦👧</span>
-        <div>Comment <span class="nhan xanh">NAM</span> hoặc <span class="nhan">NỮ</span>: Đổi đúng giới tính nhân vật của bạn (giới hạn 3 phút/lần).</div>
+        <div>Comment <span class="nhan xanh">NAM</span> hoặc <span class="nhan">NỮ</span>: Đổi đúng giới tính nhân vật (giới hạn 3 phút/lần).</div>
       </div>
       <div class="dong">
         <span class="icon">⏳</span>
-        <div>Nếu bạn đứng yên <b>5 phút</b> không tương tác (tim, bình luận, quà), nhân vật sẽ tạm rời sàn để nhường chỗ cho người mới.</div>
+        <div>Sau <b>5 phút</b> không hoạt động, nhân vật sẽ tự rời sàn để nhường chỗ cho người xem mới.</div>
       </div>
     </div>
 
-    <!-- PHẦN 2: CÁCH CHỌN TRANG PHỤC & HIỆU ỨNG CHÂN -->
+    <!-- PHẦN 2: BẢNG QUÀ TẶNG & HIỆU ỨNG -->
     <div class="the">
-      <h2>2. Đổi trang phục &amp; Hiệu ứng dưới chân</h2>
-      <div class="dong">
-        <span class="icon">👗</span>
-        <div><b>Đổi đồ trong tủ:</b> Tặng đúng món quà hiển thị trên bộ đồ, sau đó bình luận <span class="nhan vang">SỐ bộ</span> muốn mặc (ví dụ: <b>5</b> hoặc <b>12</b>).</div>
-      </div>
-      <div class="dong">
-        <span class="icon">✨</span>
-        <div><b>Hiệu ứng dưới chân:</b> Tặng đúng món quà hiệu ứng chân, sau đó bình luận <span class="nhan vang">C + số</span> (ví dụ: <b>C1</b> đến <b>C10</b>).</div>
-      </div>
-    </div>
-
-    <!-- PHẦN 3: BẢNG QUÀ & HIỆU ỨNG ĐẶC BIỆT -->
-    <div class="the">
-      <h2>3. Bảng quà tặng &amp; Hiệu ứng sân khấu</h2>
+      <h2>2. Bảng quà tặng &amp; Hiệu ứng sân khấu</h2>
       <table>
         <tr>
-          <th>Quà tặng</th>
+          <th>Món quà TikTok</th>
           <th>Hiệu ứng nhận được</th>
+          <th>Giá</th>
         </tr>
         <tr>
-          <td class="qua">🎁 Quà bất kỳ</td>
-          <td>Vào sàn nhảy + Lên hàng đầu 10 giây</td>
+          <td class="qua">🎁 Tặng ngẫu nhiên</td>
+          <td>Vào sàn nhảy + Lên hàng trước 10 giây</td>
+          <td class="xu">Tự do</td>
         </tr>
         <tr>
           <td class="qua">🌹 Hoa hồng</td>
-          <td>Mở khóa chọn Trang phục hoặc Hiệu ứng chân</td>
+          <td>Chụp ảnh đơn lưu niệm</td>
+          <td class="xu">1 xu</td>
         </tr>
         <tr>
-          <td class="qua">🚀 Zoom ưu tiên</td>
-          <td>Bay lên bục trung tâm, camera quay cận cảnh</td>
+          <td class="qua">🎮 GG</td>
+          <td>Đổi giới tính nhân vật (Nam / Nữ)</td>
+          <td class="xu">1 xu</td>
         </tr>
         <tr>
-          <td class="qua">📸 Chụp ảnh</td>
-          <td>Đứng tạo dáng chụp ảnh lưu niệm vào kho phòng</td>
+          <td class="qua">🎵 TikTok</td>
+          <td>Mở khóa chọn Hiệu ứng dưới chân</td>
+          <td class="xu">1 xu</td>
         </tr>
         <tr>
-          <td class="qua">🕊️ Đôi cánh</td>
-          <td>Đeo đôi cánh thiên thần / cánh bướm phát sáng</td>
+          <td class="qua">🍑 Quả đào</td>
+          <td>Chụp ảnh đôi cùng bạn nhảy</td>
+          <td class="xu">5 xu</td>
         </tr>
         <tr>
-          <td class="qua">🥇 Solo VIP</td>
-          <td>Đeo dây chuyền vàng + Nhảy solo trên bục lớn</td>
+          <td class="qua">🫰 Bắn tim</td>
+          <td>Zoom camera ưu tiên (10 giây)</td>
+          <td class="xu">5 xu</td>
         </tr>
         <tr>
-          <td class="qua">💞 Nhảy đôi</td>
-          <td>Mở bảng 15s chọn bạn nhảy cùng trên bục đôi</td>
+          <td class="qua">🍦 Bing Chilling</td>
+          <td>Mở khóa chọn Trang phục trong tủ đồ</td>
+          <td class="xu">5 xu</td>
         </tr>
         <tr>
-          <td class="qua">💌 Nhảy lãng mạn</td>
-          <td>Đổi sang sân khấu tình yêu &amp; nhảy đôi lãng mạn</td>
+          <td class="qua">👌 OK</td>
+          <td>Đeo thêm đôi cánh phát sáng</td>
+          <td class="xu">5 xu</td>
         </tr>
         <tr>
-          <td class="qua">👑 Party Time</td>
-          <td>Đội vương miện, thả cầu Disco &amp; chụp ảnh cả phòng</td>
+          <td class="qua">🌺 Rosa</td>
+          <td>Lên bục nhảy Solo một mình (15 giây)</td>
+          <td class="xu">10 xu</td>
+        </tr>
+        <tr>
+          <td class="qua">🧴 Nước hoa</td>
+          <td>Nhảy đôi trên bục (chọn bạn 15s · nhảy 22s)</td>
+          <td class="xu">20 xu</td>
+        </tr>
+        <tr>
+          <td class="qua">🍩 Bánh vòng</td>
+          <td>Nhảy đôi lãng mạn sàn tình yêu (30 giây)</td>
+          <td class="xu">30 xu</td>
+        </tr>
+        <tr>
+          <td class="qua">💐 Bó hoa</td>
+          <td><b>PARTY TIME</b> cả sàn bùng nổ (35 giây)</td>
+          <td class="xu">100 xu</td>
         </tr>
       </table>
     </div>
 
+    <!-- PHẦN 3: HIỆU ỨNG CHÂN (QUÀ TIKTOK) -->
+    <div class="the">
+      <h2>3. Hiệu ứng dưới chân (Tặng quà 🎵 TikTok)</h2>
+      <div class="dong">
+        <span class="icon">✨</span>
+        <div>Tặng 1 quà <span class="nhan vang">TikTok</span> sau đó bình luận mã <span class="nhan">C1</span> đến <span class="nhan">C10</span> để chọn kiểu:</div>
+      </div>
+      <div class="luoi-so">
+        <div><b>C1</b> Tim Hồng Bay</div>
+        <div><b>C6</b> Sấm Sét</div>
+        <div><b>C2</b> Sao Vàng Lấp Lánh</div>
+        <div><b>C7</b> Bướm Tím</div>
+        <div><b>C3</b> Hoa Anh Đào</div>
+        <div><b>C8</b> Vương Miện VIP</div>
+        <div><b>C4</b> Lửa Rực Cháy</div>
+        <div><b>C9</b> Nốt Nhạc</div>
+        <div><b>C5</b> Băng Tuyết</div>
+        <div><b>C10</b> Kim Cương</div>
+      </div>
+    </div>
+
+    <!-- PHẦN 4: TỦ ĐỒ 30 BỘ (QUÀ BING CHILLING) -->
+    <div class="the">
+      <h2>4. Tủ đồ 30 bộ (Tặng quà 🍦 Bing Chilling)</h2>
+      <div class="dong">
+        <span class="icon">👗</span>
+        <div>Tặng 1 quà <span class="nhan vang">Bing Chilling</span> sau đó bình luận <span class="nhan">SỐ bộ</span> từ <b>1</b> đến <b>30</b>:</div>
+      </div>
+      <div class="luoi-so">
+        <div><b>1</b> Thiên Thần Đỏ</div>
+        <div><b>16</b> Camo Neon</div>
+        <div><b>2</b> Tutu Xanh Baby</div>
+        <div><b>17</b> Xích Bạc Cargo Trắng</div>
+        <div><b>3</b> Techwear Hồng</div>
+        <div><b>18</b> Bạc Runway</div>
+        <div><b>4</b> Thiên Thần Pha Lê</div>
+        <div><b>19</b> Cargo Đen Dây Đai</div>
+        <div><b>5</b> Trắng Hồng Ngọt Ngào</div>
+        <div><b>20</b> Giáp Bạc Trùm Đầu</div>
+        <div><b>6</b> Thủy Thủ Đen Trắng</div>
+        <div><b>21</b> Băng Vàng WARNING</div>
+        <div><b>7</b> Bò Sữa Cute</div>
+        <div><b>22</b> Áo Da Đỏ</div>
+        <div><b>8</b> Punk Hồng Đen</div>
+        <div><b>23</b> Hologram Đính Đá</div>
+        <div><b>9</b> Cúp Ngực Đỏ Kim Sa</div>
+        <div><b>24</b> Giáp Cyber Neon</div>
+        <div><b>10</b> Cúp Ngực Hồng Bèo</div>
+        <div><b>25</b> Choàng Đỏ Cargo</div>
+        <div><b>11</b> Cúp Ngực Bạc Ánh Trăng</div>
+        <div><b>26</b> Trắng Dây Đỏ</div>
+        <div><b>12</b> Cúp Ngực Đen Neon</div>
+        <div><b>27</b> Street Trắng Cap</div>
+        <div><b>13</b> Cúp Ngực Xanh Ngọc</div>
+        <div><b>28</b> Đen Toàn Tập Goggle</div>
+        <div><b>14</b> Cyber Pastel Xanh</div>
+        <div><b>29</b> Jersey Đỏ Trắng</div>
+        <div><b>15</b> Hoa Đỏ Hè Phố</div>
+        <div><b>30</b> Newsboy Đen Trắng</div>
+      </div>
+    </div>
+
     <div class="luu-y">
-      Chúc các bạn có những phút giây quẩy nhạc thật vui vẻ tại phòng LIVE!<br>
-      *(Tên quà thực tế có thể thay đổi theo bảng quà hiển thị ở góc màn hình LIVE)*
+      Chúc cả nhà quẩy nhạc thật vui vẻ tại phòng LIVE STARBEAT! 💜
     </div>
   </div>
+
+  <!-- Tự động đổi link kênh TikTok nếu đường dẫn có thêm ?kenh=ten_kenh -->
+  <script>
+    const params = new URLSearchParams(location.search);
+    const kenh = params.get('kenh');
+    if (kenh) {
+      const idSach = kenh.replace(/^@+/, '').trim();
+      const nut = document.getElementById('linkTikTok');
+      nut.href = 'https://tiktok.com@' + idSach;
+      nut.textContent = '🎵 Theo dõi @' + idSach;
+    }
+  </script>
 </body>
 </html>
